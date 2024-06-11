@@ -341,9 +341,9 @@ void MotionModelDiffDrive::make_velocity_profile(
     // std::cout << "td: " << ta << std::endl;
 
     double v = 0;
-    if (t < 0)
+    if (t <= 0) 
     {
-      v = v_param.v0;
+      v = v_param.v0;//initial speed
     }
     else if (t < ta)
     {
